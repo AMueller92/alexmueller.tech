@@ -1,7 +1,7 @@
 import { Header, Anchor, Box, ResponsiveContext, Menu } from "grommet";
 import { HomeOption, Menu as MenuIcon } from "grommet-icons";
 import Image from "next/image";
-import Logo from "../public/LogoSmall.png";
+import Logo from "../public/LogoSmallWhite.png";
 import Link from "next/link";
 
 export default function HeaderNavigation() {

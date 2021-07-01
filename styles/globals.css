@@ -11,7 +11,7 @@ body {
 }
 
 .heroBox {
-  min-height: 1100px;
+  min-height: 1000px;
   overflow: hidden;
   position: relative;
   background-color: #FBFBFC;
@@ -20,8 +20,8 @@ body {
 .heroBackground {
   position: absolute;
   width: 100%;
-  height: 75%;
-  background-image: linear-gradient(#04162B, #1D406A);
+  height: 80%;
+  background-image: linear-gradient(#04162B, #244D7C);
   transform: skewY(-6deg);
   transform-origin: top left;
 }
