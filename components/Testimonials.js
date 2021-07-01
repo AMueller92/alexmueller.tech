@@ -6,55 +6,57 @@ import {
   Grid,
   Text,
   Box,
+  Heading,
+  Paragraph,
 } from "grommet";
 
 export default function Testimonials() {
   return (
-    <Box pad="xlarge">
-      <Grid
-        gap="medium"
-        rows="medium"
-        align="start"
-        justify="center"
-        columns={{ count: "fit", size: "medium" }}
-      >
+    <Box pad="medium">
+      <Grid gap="large" columns={{ count: "fit", size: "small" }}>
         <Card pad="medium" width="medium" gap="medium" background="light-1">
           <CardHeader>
-            <Text size="xlarge">Company A</Text>
+            <Heading level={3} margin="none">
+              Company A
+            </Heading>
           </CardHeader>
           <CardBody>
-            <Text>
+            <Paragraph margin="none">
               Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
               nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
               erat, sed diam voluptua. At vero eos et accusam et justo duo
               dolores et ea rebum. Stet clita kasd gubergren
-            </Text>
+            </Paragraph>
           </CardBody>
         </Card>
         <Card pad="medium" width="medium" gap="medium" background="light-1">
           <CardHeader>
-            <Text size="xlarge">Company B</Text>
+            <Heading level={3} margin="none">
+              Company B
+            </Heading>
           </CardHeader>
           <CardBody>
-            <Text>
+            <Paragraph margin="none">
               Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
               nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
               erat, sed diam voluptua. At vero eos et accusam et justo duo
               dolores et ea rebum. Stet clita kasd gubergren
-            </Text>
+            </Paragraph>
           </CardBody>
         </Card>
         <Card pad="medium" width="medium" gap="medium" background="light-1">
           <CardHeader>
-            <Text size="xlarge">Company C</Text>
+            <Heading level={3} margin="none">
+              Company C
+            </Heading>
           </CardHeader>
           <CardBody>
-            <Text>
+            <Paragraph margin="none">
               Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
               nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
               erat, sed diam voluptua. At vero eos et accusam et justo duo
               dolores et ea rebum. Stet clita kasd gubergren
-            </Text>
+            </Paragraph>
           </CardBody>
         </Card>
       </Grid>

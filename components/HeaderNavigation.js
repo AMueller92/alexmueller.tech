@@ -1,16 +1,15 @@
-import { Grommet, Header, Anchor, Box, ResponsiveContext, Menu } from "grommet";
-import { Grommet as GrommetIcon, Menu as MenuIcon } from "grommet-icons";
+import { Header, Anchor, Box, ResponsiveContext, Menu } from "grommet";
+import { HomeOption, Menu as MenuIcon } from "grommet-icons";
 import Image from "next/image";
 import Logo from "../public/LogoSmall.png";
+import Link from "next/link";
 
 export default function HeaderNavigation() {
   return (
     <Header pad="medium" height="xsmall">
-      <Anchor
-        href="https://tools.grommet.io/"
-        icon={<GrommetIcon color="brand" />}
-        label="Home"
-      />
+      <Link href="/" passHref>
+        <Anchor icon={<HomeOption color="brand" />} label="Home" />
+      </Link>
       <Image src={Logo} alt="logo" />
       <ResponsiveContext.Consumer>
         {(size) =>
@@ -28,9 +27,13 @@ export default function HeaderNavigation() {
                   },
 
                   {
-                    label: <Box pad="small">Login</Box>,
-
-                    href: "https://github.com/grommet/grommet/issues",
+                    label: (
+                      <Box pad="small">
+                        <Link href="/authenticate" passHref>
+                          <Anchor label="Login" />
+                        </Link>
+                      </Box>
+                    ),
                   },
                 ]}
               />
@@ -38,11 +41,9 @@ export default function HeaderNavigation() {
           ) : (
             <Box justify="end" direction="row" gap="medium">
               <Anchor href="https://blog.alexmueller.tech" label="Blog" />
-
-              <Anchor
-                href="https://github.com/grommet/grommet/issues"
-                label="Login"
-              />
+              <Link href="/authenticate" passHref>
+                <Anchor label="Login" />
+              </Link>
             </Box>
           )
         }
