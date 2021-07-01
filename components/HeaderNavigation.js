@@ -1,4 +1,4 @@
-import { Header, Anchor, Box, ResponsiveContext, Menu } from "grommet";
+import { Header, Anchor, Box, ResponsiveContext, Menu, Button } from "grommet";
 import { HomeOption, Menu as MenuIcon } from "grommet-icons";
 import Image from "next/image";
 import Logo from "../public/LogoSmallWhite.png";
@@ -21,7 +21,11 @@ export default function HeaderNavigation() {
                 icon={<MenuIcon color="brand" />}
                 items={[
                   {
-                    label: <Box pad="small">Blog</Box>,
+                    label: (
+                      <Box pad="small" color="light-1">
+                        Blog
+                      </Box>
+                    ),
 
                     href: "https://blog.alexmueller.tech",
                   },
@@ -35,14 +39,35 @@ export default function HeaderNavigation() {
                       </Box>
                     ),
                   },
+                  {
+                    label: (
+                      <Box pad="small">
+                        <Link href="/authenticate" passHref>
+                          <Anchor label="Contact" />
+                        </Link>
+                      </Box>
+                    ),
+                  },
                 ]}
               />
             </Box>
           ) : (
             <Box justify="end" direction="row" gap="medium">
-              <Anchor href="https://blog.alexmueller.tech" label="Blog" />
+              <Anchor
+                href="https://blog.alexmueller.tech"
+                label="Blog"
+                color="light-1"
+              />
               <Link href="/authenticate" passHref>
-                <Anchor label="Login" />
+                <Anchor label="Login" color="light-1" />
+              </Link>
+              <Link href="/authenticate" passHref>
+                <Button
+                  primary
+                  size="small"
+                  style={{ borderRadius: "7px" }}
+                  label="Contact"
+                />
               </Link>
             </Box>
           )

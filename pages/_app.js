@@ -12,6 +12,7 @@ const theme = deepMerge(grommet, {
       "light-1": "#FFFFFF",
       "light-2": "#FBFBFC",
       "dark-1": "#333333",
+      "dark-2": "#444444",
     },
   },
   table: {

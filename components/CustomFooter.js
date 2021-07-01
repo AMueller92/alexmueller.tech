@@ -38,6 +38,7 @@ export default function CustomFooter() {
           <Box>
             <Anchor href="/" size="small" color="white" label="Imprint" />
             <Anchor href="/" size="small" color="white" label="About" />
+            <Anchor href="/" size="small" color="white" label="Contact" />
           </Box>
         </Box>
       </Footer>
