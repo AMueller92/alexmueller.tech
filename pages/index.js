@@ -1,4 +1,4 @@
-import Footer from "@components/Footer";
+import CustomFooter from "@components/CustomFooter";
 import Testimonials from "@components/Testimonials";
 import HeroBase from "@components/HeroBase";
 import { Box, Text, ResponsiveContext, Button } from "grommet";
@@ -43,7 +43,9 @@ export default function Home() {
       <Box width="xlarge" margin="auto">
         <Testimonials />
       </Box>
-      <Footer />
+      <div style={{ marginTop: 80 }}>
+        <CustomFooter />
+      </div>
     </div>
   );
 }

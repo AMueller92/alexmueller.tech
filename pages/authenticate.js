@@ -1,6 +1,6 @@
 import HeroBase from "@components/HeroBase";
 import AuthForm from "@components/AuthForm";
-import Footer from "@components/Footer";
+import CustomFooter from "@components/CustomFooter";
 
 export default function Authenticate() {
   return (
@@ -17,7 +17,7 @@ export default function Authenticate() {
           <AuthForm />
         </div>
       </HeroBase>
-      <Footer />
+      <CustomFooter />
     </div>
   );
 }

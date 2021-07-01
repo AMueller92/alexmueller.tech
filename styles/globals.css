@@ -21,7 +21,7 @@ body {
   position: absolute;
   width: 100%;
   height: 80%;
-  background-image: linear-gradient(#04162B, #244D7C);
+  background-image: linear-gradient(#222222, #244D7C);
   transform: skewY(-6deg);
   transform-origin: top left;
 }
