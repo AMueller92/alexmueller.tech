@@ -1,6 +1,5 @@
 import React from "react";
 import { Footer, Box, Text, Anchor } from "grommet";
-import Logo from "../public/LogoSmallWhite.png";
 import Image from "next/image";
 import Link from "next/link";
 import ContactForm from "@components/ContactForm";
@@ -18,7 +17,7 @@ export default function CustomFooter() {
         justify="between"
       >
         <Box>
-          <Image src={Logo} alt="logo" />
+          <Image src="/LogoSmallWhite.png" alt="logo" width={165} height={79} />
         </Box>
 
         <Box direction="row" gap="xlarge">
