@@ -12,43 +12,49 @@ export default function CustomFooter() {
 
   return (
     <div>
-      <Footer background="dark-1" pad="small" justify="around">
+      <Footer
+        background="dark-1"
+        pad={{ horizontal: "large", vertical: "small" }}
+        justify="between"
+      >
         <Box>
           <Image src={Logo} alt="logo" />
         </Box>
 
-        <Box gap="xsmall" key="website" alignSelf="start">
-          <Text weight="bold" size="medium" color="brand">
-            Website
-          </Text>
-          <Box>
-            <Link href="/" passHref>
-              <Anchor size="small" color="white" label="Home" />
-            </Link>
-            <Anchor
-              href="https://blog.alexmueller.tech"
-              label="Blog"
-              size="small"
-              color="white"
-            />
-            <Link href="/authenticate" passHref>
-              <Anchor size="small" color="white" label="Login" />
-            </Link>
+        <Box direction="row" gap="xlarge">
+          <Box gap="xsmall" key="website" alignSelf="start">
+            <Text weight="bold" size="medium" color="brand">
+              Website
+            </Text>
+            <Box>
+              <Link href="/" passHref>
+                <Anchor size="small" color="white" label="Home" />
+              </Link>
+              <Anchor
+                href="https://blog.alexmueller.tech"
+                label="Blog"
+                size="small"
+                color="white"
+              />
+              <Link href="/authenticate" passHref>
+                <Anchor size="small" color="white" label="Login" />
+              </Link>
+            </Box>
           </Box>
-        </Box>
-        <Box gap="xsmall" key="legal" alignSelf="start">
-          <Text weight="bold" size="medium" color="brand">
-            Company
-          </Text>
-          <Box>
-            <Anchor href="/" size="small" color="white" label="Imprint" />
-            <Anchor href="/" size="small" color="white" label="About" />
-            <Anchor
-              onClick={onOpen}
-              size="small"
-              color="white"
-              label="Contact"
-            />
+          <Box gap="xsmall" key="legal" alignSelf="start">
+            <Text weight="bold" size="medium" color="brand">
+              Company
+            </Text>
+            <Box>
+              <Anchor href="/" size="small" color="white" label="Imprint" />
+              <Anchor href="/" size="small" color="white" label="About" />
+              <Anchor
+                onClick={onOpen}
+                size="small"
+                color="white"
+                label="Contact"
+              />
+            </Box>
           </Box>
         </Box>
       </Footer>
