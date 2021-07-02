@@ -8,6 +8,7 @@
     "export": "next export"
   },
   "dependencies": {
+    "framer-motion": "^4.1.17",
     "grommet": "^2.17.3",
     "grommet-icons": "^4.6.0",
     "next": "^11.0.0",

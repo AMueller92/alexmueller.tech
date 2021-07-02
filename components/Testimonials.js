@@ -9,6 +9,7 @@ import {
   ResponsiveContext,
 } from "grommet";
 import ResponsiveGrid from "@components/utils/ResponsiveGrid";
+import { motion } from "framer-motion";
 
 const columns = {
   small: ["auto"],
@@ -50,6 +51,8 @@ const fixedGridAreas = {
 };
 
 export default function Testimonials() {
+  const MotionBox = motion(Box);
+
   return (
     <Box>
       <ResponsiveContext.Consumer>
@@ -77,7 +80,12 @@ export default function Testimonials() {
         areas={fixedGridAreas}
         margin="medium"
       >
-        <Box gridArea="company1" justify="center" align="center">
+        <MotionBox
+          gridArea="company1"
+          justify="center"
+          align="center"
+          whileHover={{ scale: 1.04 }}
+        >
           <Card
             pad="medium"
             width="medium"
@@ -99,8 +107,13 @@ export default function Testimonials() {
               </Paragraph>
             </CardBody>
           </Card>
-        </Box>
-        <Box gridArea="company2" justify="center" align="center">
+        </MotionBox>
+        <MotionBox
+          gridArea="company2"
+          justify="center"
+          align="center"
+          whileHover={{ scale: 1.04 }}
+        >
           <Card
             pad="medium"
             width="medium"
@@ -122,8 +135,13 @@ export default function Testimonials() {
               </Paragraph>
             </CardBody>
           </Card>
-        </Box>
-        <Box gridArea="company3" justify="center" align="center">
+        </MotionBox>
+        <MotionBox
+          gridArea="company3"
+          justify="center"
+          align="center"
+          whileHover={{ scale: 1.04 }}
+        >
           <Card
             pad="medium"
             width="medium"
@@ -145,7 +163,7 @@ export default function Testimonials() {
               </Paragraph>
             </CardBody>
           </Card>
-        </Box>
+        </MotionBox>
       </ResponsiveGrid>
     </Box>
   );
