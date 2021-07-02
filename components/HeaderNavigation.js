@@ -2,7 +2,6 @@ import React from "react";
 import { Header, Anchor, Box, ResponsiveContext, Menu, Button } from "grommet";
 import { HomeOption, Menu as MenuIcon } from "grommet-icons";
 import Image from "next/image";
-import Logo from "../public/LogoSmallWhite.png";
 import Link from "next/link";
 import ContactForm from "@components/ContactForm";
 
@@ -21,7 +20,7 @@ export default function HeaderNavigation() {
             color="accent-1"
           />
         </Link>
-        <Image src={Logo} alt="logo" />
+        <Image src="/LogoSmallWhite.png" alt="logo" width={165} height={79} />
         <ResponsiveContext.Consumer>
           {(size) =>
             size === "small" ? (
