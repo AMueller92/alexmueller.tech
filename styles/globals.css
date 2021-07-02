@@ -2,6 +2,7 @@ html,
 body {
   padding: 0;
   margin: 0;
+  background-color: #333333;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell,
     Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
@@ -10,26 +11,55 @@ body {
   box-sizing: border-box;
 }
 
-main {
-  padding: 5rem 0;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.heroBox {
+  min-height: 800px;
+  overflow: hidden;
+  position: relative;
+  background-color: #FFFFFF;
 }
 
-code {
-  background: #fafafa;
-  border-radius: 5px;
-  padding: 0.75rem;
-  font-family: Menlo, Monaco, Lucida Console, Courier New, monospace;
+.heroBackground {
+  position: absolute;
+  width: 100%;
+  height: 60%;
+  background-image: linear-gradient(#111111, #244D7C);
+
+  transform-origin: top left;
 }
 
-.container {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.heroContent {
+  position: relative;
+}
+
+.mainContent {
+  max-width: 1600px;
+}
+
+.mainHeadlineLarge {
+  margin-top: 130px;
+  margin-left: 140px;
+  margin-bottom: 80px;
+}
+
+.mainHeadlineSmall {
+  margin-top: 50px;
+  margin-left: 20px;
+  margin-bottom: 50px;
+}
+
+.testimonialBox {
+  overflow: hidden;
+  position: relative;
+  background-color: #F6F7FC;
+}
+
+.testimonialsBackground {
+  position: absolute;
+  width: 100%;
+  height: 45%;
+  background-color: #FFFFFF;
+}
+
+.testimonialContent {
+  position: relative;
 }

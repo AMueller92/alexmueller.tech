@@ -1,23 +1,75 @@
-import Head from 'next/head'
-import Header from '@components/Header'
-import Footer from '@components/Footer'
+import React from "react";
+import CustomFooter from "@components/CustomFooter";
+import Testimonials from "@components/Testimonials";
+import HeroBase from "@components/HeroBase";
+import { Box, Text, ResponsiveContext, Button } from "grommet";
+import Services from "@components/Services";
+import ContactForm from "@components/ContactForm";
 
 export default function Home() {
+  const [open, setOpen] = React.useState(false);
+  const onOpen = () => setOpen(true);
+  const onClose = () => setOpen(undefined);
+
   return (
-    <div className="container">
-      <Head>
-        <title>Next.js Starter!</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+    <div>
+      <HeroBase title="Alexander Mueller">
+        <ResponsiveContext.Consumer>
+          {(size) =>
+            size === "small" ? (
+              <Box width="large" className="mainHeadlineSmall">
+                <Text size="xxlarge" color="light-1">
+                  Custom Product & Software Development Focused On Your Success
+                </Text>
+                <Button
+                  primary
+                  label="Contact"
+                  size="medium"
+                  style={{
+                    width: 160,
+                    borderRadius: "8px",
+                    marginTop: "10px",
+                  }}
+                />
+              </Box>
+            ) : (
+              <Box width="large" className="mainHeadlineLarge">
+                <Text size="4xl" color="light-1">
+                  Custom Product & Software Development Focused On Your Success
+                </Text>
+                <Button
+                  primary
+                  label="Contact"
+                  size="large"
+                  onClick={onOpen}
+                  style={{ width: 200, borderRadius: "8px", marginTop: "20px" }}
+                />
+              </Box>
+            )
+          }
+        </ResponsiveContext.Consumer>
 
-      <main>
-        <Header title="Welcome to my app!" />
-        <p className="description">
-          Get started by editing <code>pages/index.js</code>
-        </p>
-      </main>
+        <ResponsiveContext.Consumer>
+          {(size) => (
+            <Box margin={{ bottom: size === "small" ? "xlarge" : "large" }}>
+              <Services />
+            </Box>
+          )}
+        </ResponsiveContext.Consumer>
+      </HeroBase>
+      <div className="testimonialBox">
+        <div className="testimonialsBackground"></div>
+        <div className="testimonialContent">
+          <Box pad={{ bottom: "xlarge" }} margin="auto" width="xlarge">
+            <Testimonials />
+          </Box>
+        </div>
+      </div>
 
-      <Footer />
+      <Box>
+        <CustomFooter />
+      </Box>
+      {open && <ContactForm onClose={onClose} />}
     </div>
-  )
+  );
 }
