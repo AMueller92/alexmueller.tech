@@ -1,10 +1,15 @@
-import styles from "./Footer.module.css";
+import React from "react";
 import { Footer, Box, Text, Anchor } from "grommet";
 import Logo from "../public/LogoSmallWhite.png";
 import Image from "next/image";
 import Link from "next/link";
+import ContactForm from "@components/ContactForm";
 
 export default function CustomFooter() {
+  const [open, setOpen] = React.useState(false);
+  const onOpen = () => setOpen(true);
+  const onClose = () => setOpen(undefined);
+
   return (
     <div>
       <Footer background="dark-1" pad="small" justify="around">
@@ -38,7 +43,12 @@ export default function CustomFooter() {
           <Box>
             <Anchor href="/" size="small" color="white" label="Imprint" />
             <Anchor href="/" size="small" color="white" label="About" />
-            <Anchor href="/" size="small" color="white" label="Contact" />
+            <Anchor
+              onClick={onOpen}
+              size="small"
+              color="white"
+              label="Contact"
+            />
           </Box>
         </Box>
       </Footer>
@@ -54,6 +64,7 @@ export default function CustomFooter() {
           © {new Date().getFullYear()} Copyright
         </Text>
       </Footer>
+      {open && <ContactForm onClose={onClose} />}
     </div>
   );
 }

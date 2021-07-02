@@ -33,6 +33,17 @@ body {
 
 .mainContent {
   max-width: 1600px;
+}
 
+.mainHeadlineLarge {
+  margin-top: 130px;
+  margin-left: 140px;
+  margin-bottom: 100px;
+}
+
+.mainHeadlineSmall {
+  margin-top: 50px;
+  margin-left: 20px;
+  margin-bottom: 50px;
 }
 
