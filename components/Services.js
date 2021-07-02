@@ -9,7 +9,6 @@ import {
   ResponsiveContext,
 } from "grommet";
 import ResponsiveGrid from "@components/utils/ResponsiveGrid";
-import { motion } from "framer-motion";
 
 // If the size is small, we only see 1 column
 // If the size is medium or above, we see 2 columns
@@ -68,8 +67,6 @@ const fixedGridAreas = {
 };
 
 export default function Services() {
-  const MotionBox = motion(Box);
-
   return (
     <Box>
       <ResponsiveContext.Consumer>
@@ -98,13 +95,7 @@ export default function Services() {
         areas={fixedGridAreas}
         margin="large"
       >
-        <MotionBox
-          gridArea="service1"
-          justify="center"
-          align="center"
-          whileHover={{ scale: 1.06, rotate: -1 }}
-          whileTap={{ scale: 1.05 }}
-        >
+        <Box gridArea="service1" justify="center" align="center">
           <Card
             pad="medium"
             width="large"
@@ -126,15 +117,9 @@ export default function Services() {
               </Paragraph>
             </CardBody>
           </Card>
-        </MotionBox>
+        </Box>
 
-        <MotionBox
-          gridArea="service2"
-          justify="center"
-          align="center"
-          whileHover={{ scale: 1.06, rotate: 1 }}
-          whileTap={{ scale: 1.05 }}
-        >
+        <Box gridArea="service2" justify="center" align="center">
           <Card
             pad="medium"
             width="large"
@@ -156,14 +141,8 @@ export default function Services() {
               </Paragraph>
             </CardBody>
           </Card>
-        </MotionBox>
-        <MotionBox
-          gridArea="service3"
-          justify="center"
-          align="center"
-          whileHover={{ scale: 1.06, rotate: -1 }}
-          whileTap={{ scale: 1.05 }}
-        >
+        </Box>
+        <Box gridArea="service3" justify="center" align="center">
           <Card
             pad="medium"
             width="large"
@@ -185,14 +164,8 @@ export default function Services() {
               </Paragraph>
             </CardBody>
           </Card>
-        </MotionBox>
-        <MotionBox
-          gridArea="service4"
-          justify="center"
-          align="center"
-          whileHover={{ scale: 1.06, rotate: 1 }}
-          whileTap={{ scale: 1.05 }}
-        >
+        </Box>
+        <Box gridArea="service4" justify="center" align="center">
           <Card
             pad="medium"
             width="large"
@@ -214,7 +187,7 @@ export default function Services() {
               </Paragraph>
             </CardBody>
           </Card>
-        </MotionBox>
+        </Box>
       </ResponsiveGrid>
     </Box>
   );
