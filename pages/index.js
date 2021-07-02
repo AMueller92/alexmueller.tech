@@ -49,7 +49,13 @@ export default function Home() {
           }
         </ResponsiveContext.Consumer>
 
-        <Services />
+        <ResponsiveContext.Consumer>
+          {(size) => (
+            <Box margin={{ bottom: size === "small" ? "xlarge" : "large" }}>
+              <Services />
+            </Box>
+          )}
+        </ResponsiveContext.Consumer>
       </HeroBase>
       <Box width="xlarge" margin="auto">
         <Testimonials />

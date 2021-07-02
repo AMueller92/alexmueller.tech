@@ -6,6 +6,7 @@ import {
   Card,
   Heading,
   Paragraph,
+  ResponsiveContext,
 } from "grommet";
 import ResponsiveGrid from "@components/utils/ResponsiveGrid";
 
@@ -68,9 +69,25 @@ const fixedGridAreas = {
 export default function Services() {
   return (
     <Box>
-      <Text size="4xl" textAlign="center" color="light-1">
-        Services
-      </Text>
+      <ResponsiveContext.Consumer>
+        {(size) =>
+          size === "small" ? (
+            <Text
+              size="xxlarge"
+              textAlign="center"
+              color="light-1"
+              margin={{ bottom: "small" }}
+            >
+              Services
+            </Text>
+          ) : (
+            <Text size="4xl" textAlign="center" color="light-1">
+              Services
+            </Text>
+          )
+        }
+      </ResponsiveContext.Consumer>
+
       <ResponsiveGrid
         rows={rows}
         columns={columns}
@@ -79,7 +96,14 @@ export default function Services() {
         margin="large"
       >
         <Box gridArea="service1" justify="center" align="center">
-          <Card pad="medium" width="large" gap="medium" background="light-1">
+          <Card
+            pad="medium"
+            width="large"
+            height="medium"
+            gap="medium"
+            background="light-1"
+            elevation="xlarge"
+          >
             <CardHeader>
               <Heading level={3} margin="none">
                 Service 1
@@ -95,7 +119,14 @@ export default function Services() {
           </Card>
         </Box>
         <Box gridArea="service2" justify="center" align="center">
-          <Card pad="medium" width="large" gap="medium" background="light-1">
+          <Card
+            pad="medium"
+            width="large"
+            height="medium"
+            gap="medium"
+            background="light-1"
+            elevation="xlarge"
+          >
             <CardHeader>
               <Heading level={3} margin="none">
                 Service 2
@@ -111,7 +142,14 @@ export default function Services() {
           </Card>
         </Box>
         <Box gridArea="service3" justify="center" align="center">
-          <Card pad="medium" width="large" gap="medium" background="light-1">
+          <Card
+            pad="medium"
+            width="large"
+            height="medium"
+            gap="medium"
+            background="light-1"
+            elevation="xlarge"
+          >
             <CardHeader>
               <Heading level={3} margin="none">
                 Service 3
@@ -127,7 +165,14 @@ export default function Services() {
           </Card>
         </Box>
         <Box gridArea="service4" justify="center" align="center">
-          <Card pad="medium" width="large" gap="medium" background="light-1">
+          <Card
+            pad="medium"
+            width="large"
+            height="medium"
+            gap="medium"
+            background="light-1"
+            elevation="xlarge"
+          >
             <CardHeader>
               <Heading level={3} margin="none">
                 Service 4

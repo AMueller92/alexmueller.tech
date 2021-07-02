@@ -2,11 +2,11 @@ import {
   Card,
   CardBody,
   CardHeader,
-  Grid,
   Text,
   Box,
   Heading,
   Paragraph,
+  ResponsiveContext,
 } from "grommet";
 import ResponsiveGrid from "@components/utils/ResponsiveGrid";
 
@@ -52,9 +52,24 @@ const fixedGridAreas = {
 export default function Testimonials() {
   return (
     <Box>
-      <Text size="4xl" textAlign="center" style={{ marginTop: 50 }}>
-        What Customers are saying
-      </Text>
+      <ResponsiveContext.Consumer>
+        {(size) =>
+          size === "small" ? (
+            <Text
+              size="xxlarge"
+              textAlign="center"
+              margin={{ bottom: "medium", top: "large" }}
+            >
+              What Customers are saying
+            </Text>
+          ) : (
+            <Text size="4xl" textAlign="center" style={{ marginTop: 50 }}>
+              What Customers are saying
+            </Text>
+          )
+        }
+      </ResponsiveContext.Consumer>
+
       <ResponsiveGrid
         rows={rows}
         columns={columns}
@@ -63,7 +78,13 @@ export default function Testimonials() {
         margin="medium"
       >
         <Box gridArea="company1" justify="center" align="center">
-          <Card pad="medium" width="medium" gap="medium" background="light-1">
+          <Card
+            pad="medium"
+            width="medium"
+            gap="medium"
+            background="light-1"
+            elevation="large"
+          >
             <CardHeader>
               <Heading level={3} margin="none">
                 Company A
@@ -80,7 +101,13 @@ export default function Testimonials() {
           </Card>
         </Box>
         <Box gridArea="company2" justify="center" align="center">
-          <Card pad="medium" width="medium" gap="medium" background="light-1">
+          <Card
+            pad="medium"
+            width="medium"
+            gap="medium"
+            background="light-1"
+            elevation="large"
+          >
             <CardHeader>
               <Heading level={3} margin="none">
                 Company B
@@ -97,7 +124,13 @@ export default function Testimonials() {
           </Card>
         </Box>
         <Box gridArea="company3" justify="center" align="center">
-          <Card pad="medium" width="medium" gap="medium" background="light-1">
+          <Card
+            pad="medium"
+            width="medium"
+            gap="medium"
+            background="light-1"
+            elevation="large"
+          >
             <CardHeader>
               <Heading level={3} margin="none">
                 Company C
