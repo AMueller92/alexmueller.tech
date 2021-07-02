@@ -83,7 +83,7 @@ export default function Testimonials() {
             width="medium"
             gap="medium"
             background="light-1"
-            elevation="large"
+            elevation="xlarge"
           >
             <CardHeader>
               <Heading level={3} margin="none">
@@ -106,7 +106,7 @@ export default function Testimonials() {
             width="medium"
             gap="medium"
             background="light-1"
-            elevation="large"
+            elevation="xlarge"
           >
             <CardHeader>
               <Heading level={3} margin="none">
@@ -129,7 +129,7 @@ export default function Testimonials() {
             width="medium"
             gap="medium"
             background="light-1"
-            elevation="large"
+            elevation="xlarge"
           >
             <CardHeader>
               <Heading level={3} margin="none">

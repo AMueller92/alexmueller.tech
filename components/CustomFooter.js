@@ -46,7 +46,10 @@ export default function CustomFooter() {
               Company
             </Text>
             <Box>
-              <Anchor href="/" size="small" color="white" label="Imprint" />
+              <Link href="/imprint" passHref>
+                <Anchor size="small" color="white" label="Imprint" />
+              </Link>
+
               <Anchor href="/" size="small" color="white" label="About" />
               <Anchor
                 onClick={onOpen}

@@ -12,18 +12,18 @@ body {
 }
 
 .heroBox {
-  min-height: 1000px;
+  min-height: 800px;
   overflow: hidden;
   position: relative;
-  background-color: #FBFBFC;
+  background-color: #FFFFFF;
 }
 
 .heroBackground {
   position: absolute;
   width: 100%;
-  height: 80%;
+  height: 65%;
   background-image: linear-gradient(#111111, #244D7C);
-  transform: skewY(-6deg);
+
   transform-origin: top left;
 }
 
@@ -47,3 +47,19 @@ body {
   margin-bottom: 50px;
 }
 
+.testimonialBox {
+  overflow: hidden;
+  position: relative;
+  background-color: #F6F7FC;
+}
+
+.testimonialsBackground {
+  position: absolute;
+  width: 100%;
+  height: 45%;
+  background-color: #FFFFFF;
+}
+
+.testimonialContent {
+  position: relative;
+}

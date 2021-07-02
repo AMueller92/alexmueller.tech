@@ -57,12 +57,18 @@ export default function Home() {
           )}
         </ResponsiveContext.Consumer>
       </HeroBase>
-      <Box width="xlarge" margin="auto">
-        <Testimonials />
-      </Box>
-      <div style={{ marginTop: 80 }}>
-        <CustomFooter />
+      <div className="testimonialBox">
+        <div className="testimonialsBackground"></div>
+        <div className="testimonialContent">
+          <Box pad={{ bottom: "large" }} margin="auto" width="xlarge">
+            <Testimonials />
+          </Box>
+        </div>
       </div>
+
+      <Box>
+        <CustomFooter />
+      </Box>
       {open && <ContactForm onClose={onClose} />}
     </div>
   );

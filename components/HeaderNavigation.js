@@ -15,7 +15,11 @@ export default function HeaderNavigation() {
     <div>
       <Header pad="medium" height="xsmall">
         <Link href="/" passHref>
-          <Anchor icon={<HomeOption color="brand" />} label="Home" />
+          <Anchor
+            icon={<HomeOption color="accent-1" />}
+            label="Home"
+            color="accent-1"
+          />
         </Link>
         <Image src={Logo} alt="logo" />
         <ResponsiveContext.Consumer>
