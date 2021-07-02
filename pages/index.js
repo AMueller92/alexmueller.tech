@@ -60,7 +60,7 @@ export default function Home() {
       <div className="testimonialBox">
         <div className="testimonialsBackground"></div>
         <div className="testimonialContent">
-          <Box pad={{ bottom: "large" }} margin="auto" width="xlarge">
+          <Box pad={{ bottom: "xlarge" }} margin="auto" width="xlarge">
             <Testimonials />
           </Box>
         </div>

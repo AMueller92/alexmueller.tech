@@ -32,9 +32,9 @@ const rows = {
     "xsmall",
     "xsmall",
   ],
-  medium: ["small", "small"],
-  large: ["small", "small"],
-  xlarge: ["small", "small"],
+  medium: ["medium", "medium"],
+  large: ["medium", "medium"],
+  xlarge: ["medium", "medium"],
 };
 
 // Set the different areas you need for every size
@@ -91,7 +91,7 @@ export default function Services() {
       <ResponsiveGrid
         rows={rows}
         columns={columns}
-        gap="medium"
+        gap="large"
         areas={fixedGridAreas}
         margin="large"
       >

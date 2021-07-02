@@ -21,7 +21,7 @@ body {
 .heroBackground {
   position: absolute;
   width: 100%;
-  height: 65%;
+  height: 60%;
   background-image: linear-gradient(#111111, #244D7C);
 
   transform-origin: top left;
